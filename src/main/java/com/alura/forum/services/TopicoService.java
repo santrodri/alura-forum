@@ -47,7 +47,9 @@ public class TopicoService {
     public TopicoDto modifyTopico(Long id, TopicoForSaveDto topicoForSaveDto){
         Topico topico = topicoRepository
         .findById(id)
-        .orElseThrow(() -> new RuntimeException("Tópico não encontrado"));
+        .orElseThrow(
+            () -> new RuntimeException("Tópico não encontrado")
+        );
 
         topico.setTitulo(topicoForSaveDto.titulo());
         topico.setMensagem(topicoForSaveDto.mensagem());
