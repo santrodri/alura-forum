@@ -2,3 +2,8 @@ databaseChangeLog:
   - include:
       file: v1__create_user_table.yaml
       relativeToChangelogFile: true
+
+  - include:
+      file: v2__create_topico_table.yaml
+      relativeToChangelogFile: true
+
